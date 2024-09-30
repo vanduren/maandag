@@ -17,4 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::get('create_token', [ProfileController::class, 'createToken']);
+
 require __DIR__.'/auth.php';
